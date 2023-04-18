@@ -9,7 +9,7 @@ When("user navigate to add new computer page", () => {
   computerPOM.getAddNewComputerButton().should('exist')
   computerPOM.getAddNewComputerButton().click()
   cy.wait(2000)
-  });
+});
 
 Then("user can see the add new computer page details", () => {
   computerPOM.getURL().should('include', "/computers/new")
@@ -87,9 +87,9 @@ And("user inputs invalid dates", () => {
 
 Then("user gets date format error", () => {
   computerPOM.getIntroducedDate()
-    .should('contain', "Failed to decode date : java.time.format.DateTimeParseException: Text 'abcd' could not be parsed at index 0")
+  .should('contain', "Failed to decode date : java.time.format.DateTimeParseException: Text 'abcd' could not be parsed at index 0")
   computerPOM.getDiscontinuedDate()
-    .should('contain', "Failed to decode date : java.time.format.DateTimeParseException: Text '2021-21' could not be parsed at index 7")
+  .should('contain', "Failed to decode date : java.time.format.DateTimeParseException: Text '2021-21' could not be parsed at index 7")
 });
 
 And("user inputs valid details", () => {

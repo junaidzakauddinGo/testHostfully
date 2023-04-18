@@ -17,9 +17,6 @@ export class computer{
 	getCompany(){
 		return cy.get('.clearfix').eq(3)
 	}
-	getCompanyDropdown(){
-		
-	}
 	getSubmitButton(){
 		return cy.get('[type="submit"]')
 	}

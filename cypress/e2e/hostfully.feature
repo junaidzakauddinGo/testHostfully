@@ -37,3 +37,8 @@ Feature: Adding a new Computer
     And user inputs valid details
     And user clicks on create this computer button
     Then gets successful creation alert
+
+  Scenario: Search Existing Computer Name
+    Given user navigates to website
+    When Inputs computer name and clicks on search
+    Then Verify the searched name and records count
